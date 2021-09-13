@@ -26,9 +26,12 @@ def txt_file():
 # In[14]:
 
 
-TOKEN = "BBFF-OWvFMysqIBQHikVDTLDNIRkJwiDiWS"  # Put your TOKEN here
+TOKEN = "ubidots Token"  # Put your TOKEN here
 # DEVICE_LABEL = "ph"  # Put your device label here 
 # VARIABLE_LABEL_1 = "ph"  # Put your first variable label here
+# Enter username password of https://fluent.walchem.com
+username="insert username"
+password="insert password"
 ls=[]
 
 driver=webdriver.Chrome('chromedriver')
@@ -47,9 +50,9 @@ def credential_fun():
     time.sleep(5)
     if driver.current_url=='https://fluent.walchem.com/login.html':
         user=driver.find_element_by_id('username')
-        user.send_keys('julian.ospina@premexcorp.com')
+        user.send_keys(username)
         password=driver.find_element_by_id('password')
-        password.send_keys('Delivery2021')
+        password.send_keys(password)
         ent=driver.find_element_by_id('login_button')
         ent.click()
 
